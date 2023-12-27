@@ -12,7 +12,7 @@ def lassoLetter(letter, shiftAmount):
         begAlphaCode = CapACode
     else:
         begAlphaCode = lowACode
-        
+
 
 
     decodedLetterCode = letterCode + shiftAmount;
@@ -36,6 +36,6 @@ def lassoWord(word, shifAmount):
     return decodedWord
 
 print(lassoWord("WHY", 13))
-print(lassoWord("OSKZA", -18))
-print(lassoWord("OHUPO", -1))
-print(lassoWord("ED", 25))
+print(lassoWord("OsKzA", -18))
+print(lassoWord("OHUpO", -1))
+print(lassoWord("ed", 25))
