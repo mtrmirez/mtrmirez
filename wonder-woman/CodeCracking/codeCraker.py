@@ -26,3 +26,6 @@ def lassoWord(word, shifAmount):
     return decodedWord
 
 print(lassoWord("WHY", 13))
+print(lassoWord("OSKZA", -18))
+print(lassoWord("OHUPO", -1))
+print(lassoWord("ED", 25))
