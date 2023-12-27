@@ -1,9 +1,19 @@
 def lassoLetter(letter, shiftAmount):
-    letterCode = ord(letter);
+    letterCode = ord(letter)
 
-    
-    begAlphaCode = ord('A')
+    CapACode = ord('A')
+    CapZCode = ord('Z')
+    lowACode = ord('a')
+    lowZCode = ord('z')
+
     alphabetSize = 26
+
+    if (letterCode >= CapACode) & (letterCode <= CapZCode):
+        begAlphaCode = CapACode
+    else:
+        begAlphaCode = lowACode
+        
+
 
     decodedLetterCode = letterCode + shiftAmount;
 
