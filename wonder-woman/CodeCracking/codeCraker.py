@@ -1,19 +1,13 @@
-#lassoLetter ('A', -3 ='D')
 def lassoLetter(letter, shiftAmount):
-    #letterCode = 90
     letterCode = ord(letter);
 
-    #begAlphaCode: 65
+    
     begAlphaCode = ord('A')
     alphabetSize = 26
 
-    #decodedLetterCode = 93
     decodedLetterCode = letterCode + shiftAmount;
-    print(decodedLetterCode)
 
-    #trueLetterCode = 67
     trueLetterCode = begAlphaCode + ((letterCode - begAlphaCode) + shiftAmount) % alphabetSize
-    print(trueLetterCode)
 
     decodedLetter = chr(trueLetterCode)
 
@@ -21,6 +15,14 @@ def lassoLetter(letter, shiftAmount):
 
     return decodedLetter
 
-print (lassoLetter('A', 3))
+def lassoWord(word, shifAmount):
+    decodedWord = ""
 
-#print("The letter " + letter + "'s ASCII code is : "letterCode)
+    for letter in word:
+        decodedLetter = lassoLetter(letter, shifAmount)
+
+        decodedWord = decodedWord + decodedLetter
+    
+    return decodedWord
+
+print(lassoWord("WHY", 13))
